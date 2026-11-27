@@ -2,8 +2,5 @@
   command = "npm run build"
   # O diretório de publicação é gerenciado pela integração oficial do Next.js.
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [build.environment]
   NODE_VERSION = "20"
