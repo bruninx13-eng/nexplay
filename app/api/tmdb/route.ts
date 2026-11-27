@@ -19,12 +19,8 @@ export async function GET(request: NextRequest) {
     params[key] = value;
   }
 
-  // Revalidação configurável via query (padrão 1h).
-  const revalidateParam = searchParams.get("revalidate");
-  const revalidate = revalidateParam ? Number(revalidateParam) : 3600;
-
   try {
-    const data = await tmdbFetch(path, { params, revalidate });
+    const data = await tmdbFetch(path, { params });
     return NextResponse.json(data, {
       headers: {
         "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",

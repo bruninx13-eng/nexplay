@@ -22,7 +22,6 @@ function apiKey(): string {
 }
 
 export type TmdbFetchOptions = {
-  revalidate?: number;
   params?: Record<string, string | number | boolean | undefined>;
 };
 
@@ -30,7 +29,7 @@ export async function tmdbFetch<T = unknown>(
   path: string,
   options: TmdbFetchOptions = {},
 ): Promise<T> {
-  const { revalidate = 3600, params = {} } = options;
+  const { params = {} } = options;
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const url = new URL(`${TMDB_BASE}${normalizedPath}`);
   url.searchParams.set("api_key", apiKey());
@@ -49,7 +48,9 @@ export async function tmdbFetch<T = unknown>(
   }
 
   const res = await fetch(url.toString(), {
-    next: { revalidate },
+    // Evita o cache de dados do Next.js em ambientes serverless (Netlify),
+    // que pode retornar respostas cruzadas entre URLs diferentes.
+    cache: "no-store",
   });
   if (!res.ok) {
     const text = await res.text().catch(() => "");
