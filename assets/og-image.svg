@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070D"/>
+      <stop offset="0.55" stop-color="#070D18"/>
+      <stop offset="1" stop-color="#03060C"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(930 120) rotate(120) scale(620 500)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#087BFF" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#087BFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(260 590) rotate(-50) scale(430 300)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28B9FF" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#28B9FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="neon" x1="380" y1="285" x2="780" y2="345" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FE4FF"/>
+      <stop offset="0.5" stop-color="#28B9FF"/>
+      <stop offset="1" stop-color="#087BFF"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="70" y1="48" x2="150" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28B9FF"/>
+      <stop offset="1" stop-color="#087BFF"/>
+    </linearGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#28B9FF" stroke-opacity="0.06"/>
+    </pattern>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="markGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="playCut">
+      <rect width="1200" height="630" fill="white"/>
+      <path d="M105 84L131 100L105 116V84Z" fill="black"/>
+    </mask>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <g opacity="0.65">
+    <circle cx="1030" cy="168" r="230" fill="none" stroke="#28B9FF" stroke-opacity="0.12"/>
+    <circle cx="1030" cy="168" r="168" fill="none" stroke="#28B9FF" stroke-opacity="0.1"/>
+    <circle cx="1030" cy="168" r="108" fill="#06162C" fill-opacity="0.45" stroke="#8FE4FF" stroke-opacity="0.25"/>
+    <path d="M1012 130L1058 168L1012 206V130Z" fill="url(#neon)" opacity="0.85" filter="url(#markGlow)"/>
+  </g>
+
+  <g>
+    <rect x="70" y="48" width="92" height="92" rx="24" fill="#071120" stroke="#16467C" stroke-width="2"/>
+    <path d="M93 117V71L139 117V71" fill="none" stroke="url(#mark)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" filter="url(#markGlow)" mask="url(#playCut)"/>
+    <path d="M105 84L131 100L105 116V84Z" fill="#FFFFFF"/>
+  </g>
+  <text x="184" y="94" fill="#FFFFFF" font-family="Arial Black, Arial, sans-serif" font-size="34" font-weight="900" letter-spacing="5">NEXPLAY</text>
+  <text x="186" y="120" fill="#A5B4C8" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="4">ENTRETENIMENTO DIGITAL</text>
+
+  <text x="72" y="252" fill="#FFFFFF" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-2">SEU PRÓXIMO</text>
+  <text x="72" y="326" fill="url(#neon)" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-2">ENTRETENIMENTO</text>
+  <text x="72" y="400" fill="#FFFFFF" font-family="Arial Black, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-2">COMEÇA AQUI.</text>
+
+  <text x="76" y="458" fill="#A5B4C8" font-family="Arial, sans-serif" font-size="24">Descubra nossas opções e encontre a experiência ideal</text>
+  <text x="76" y="490" fill="#A5B4C8" font-family="Arial, sans-serif" font-size="24">para você e sua família.</text>
+
+  <g>
+    <rect x="72" y="536" width="410" height="50" rx="25" fill="#07101D" stroke="#25D366" stroke-opacity="0.35"/>
+    <circle cx="100" cy="561" r="7" fill="#25D366"/>
+    <text x="120" y="568" fill="#C9F8D8" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="0.4">Atendimento direto pelo WhatsApp</text>
+  </g>
+
+  <g>
+    <rect x="810" y="536" width="318" height="50" rx="25" fill="#0A1B33" stroke="#28B9FF" stroke-opacity="0.3"/>
+    <text x="832" y="568" fill="#8FDBFF" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="1.5">PLANOS A PARTIR DE R$ 25,00</text>
+  </g>
+
+  <path d="M72 606H1128" stroke="#28B9FF" stroke-opacity="0.25"/>
+  <path d="M72 606H360" stroke="#28B9FF" stroke-width="2"/>
+</svg>

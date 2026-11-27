@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1424"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="16" y1="14" x2="50" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28B9FF"/>
+      <stop offset="1" stop-color="#087BFF"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <mask id="play-cut">
+      <rect width="64" height="64" fill="white"/>
+      <path d="M28.2 25.3L37 30.8L28.2 36.3V25.3Z" fill="black"/>
+    </mask>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="url(#bg)" stroke="#16467C" stroke-width="2"/>
+  <path d="M18 45V19L46 45V19" fill="none" stroke="url(#neon)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" mask="url(#play-cut)"/>
+  <path d="M28.2 25.3L37 30.8L28.2 36.3V25.3Z" fill="#FFFFFF"/>
+</svg>

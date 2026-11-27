@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <defs>
+    <linearGradient id="bg" x1="24" y1="12" x2="156" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1424"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="44" y1="38" x2="142" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#28B9FF"/>
+      <stop offset="1" stop-color="#087BFF"/>
+    </linearGradient>
+    <mask id="play-cut">
+      <rect width="180" height="180" fill="white"/>
+      <path d="M79 71L104 86.5L79 102V71Z" fill="black"/>
+    </mask>
+  </defs>
+  <rect width="180" height="180" fill="url(#bg)"/>
+  <path d="M51 127V53L130 127V53" fill="none" stroke="url(#neon)" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" mask="url(#play-cut)"/>
+  <path d="M79 71L104 86.5L79 102V71Z" fill="#FFFFFF"/>
+</svg>
