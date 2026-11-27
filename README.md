@@ -184,6 +184,16 @@ Cloudflare Pages, utilize o adaptador oficial do Next.js
 4. Adicione as variáveis de ambiente de produção, incluindo `TMDB_API_KEY`.
 5. Publique.
 
+### Netlify
+
+1. Crie/importe o repositório no Netlify (site criado: `nexplaytv.netlify.app`).
+2. Build command: `npm run build`.
+3. O diretório de publicação é gerenciado pela integração oficial do Next.js
+   (`@netlify/plugin-nextjs`).
+4. Configure as variáveis de ambiente de produção (incluindo `TMDB_API_KEY` e,
+   se desejar, `EPG_SOURCE_URL`).
+5. Deploy automático a cada push na branch `main`.
+
 ### Domínio próprio
 
 No painel da Vercel ou Cloudflare, adicione o domínio e siga as instruções de
